@@ -33,7 +33,7 @@
   $result= mysqli_query($connection,$sql);
   while($row= mysqli_fetch_assoc($result))
   {
-  echo $row['categorie']."<br>"."<b>".$row["user"]."</b>"." "."<span>".$row["timestamp"].
+  echo "<br>"."<b>".$row["user"]."</b>"." "."<span>".$row["timestamp"].
   "</span>"."<br>"."<br>"."&nbsp;&nbsp;".$row["message"]."<hr>";
   }
 }
@@ -46,8 +46,7 @@ else{
   {
   echo "<div class='category_".$row['categorie']."'><br>"."<b>".$row["user"]."</b>"." "."<span>".$row["timestamp"].
   "</span>"."<br>"."<br>"."&nbsp;&nbsp;".$row["message"]."<br>"."<br>".
-  '<form class="form" action="".php method="POST">'.
-  '<textarea id="comment1" name="comment" rows="4" cols="80"></textarea>'.
+  '<form class="form" action="comment.php" method="POST">'.
   '<input id="button" type="submit" value="Reageer">'."</form>"."<hr></div>";
   }
 }

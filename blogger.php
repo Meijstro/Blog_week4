@@ -11,7 +11,9 @@ shortcuts = {
     "cg": "CodeGorilla",
     "CG": "CodeGorilla",
     "gn": "Groningen",
-    "GN": "Groningen"
+    "GN": "Groningen",
+    "mvg": "Met vriendelijke groet",
+    "MVG": "Met vriendelijke groet"
 
 
 }

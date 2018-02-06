@@ -23,30 +23,9 @@
 
   <div class="bericht" id="trump">
     <?php
-    if (isset($_POST['button2'])) {
-              $name = $_POST['blogger'];
-
-    // use data from the database and show it
-    $sql= "SELECT * FROM list WHERE user = '$name' AND categorie = 'trump'
-    ORDER BY timestamp DESC;";
-    $result= mysqli_query($connection,$sql);
-    while($row= mysqli_fetch_assoc($result))
-    {
-    echo "<br>"."<b>".$row["user"]."</b>"." "."<span>".$row["timestamp"].
-    "</span>"."<br>"."<br>"."&nbsp;&nbsp;".$row["message"]."<hr>";
-    }
-  }
-  else{
-
-    $sql= "SELECT * FROM list WHERE categorie= 'trump'
-    ORDER BY timestamp DESC;";
-    $result= mysqli_query($connection,$sql);
-    while($row= mysqli_fetch_assoc($result))
-    {
-    echo "<br>"."<b>".$row["user"]."</b>"." "."<span>".$row["timestamp"].
-    "</span>"."<br>"."<br>"."&nbsp;&nbsp;".$row["message"]."<hr>";
-    }
-  }
+    echo  '<form class="form" action="comment.php" method="POST">'.
+          '<textarea id="comment1" placeholder="add comment.." name="comment" rows="4" cols="80"></textarea>'.
+          '<input id="button" type="submit" value="Reageer">'."</form>"."<hr></div>";
     ?>
   </div>
 
