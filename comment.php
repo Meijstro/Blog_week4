@@ -3,33 +3,51 @@
 <head>
 <title></title>
 <link rel="stylesheet" href="blog.css">
-<script type="text/javascript" src=""></script>
+<script>
+shortcuts = {
+    "cci": "customer called in",
+    "rfc": "request for comments",
+    "www": "world wide web",
+    "cg": "CodeGorilla",
+    "CG": "CodeGorilla",
+    "gn": "Groningen",
+    "GN": "Groningen",
+    "mvg": "Met vriendelijke groet",
+    "MVG": "Met vriendelijke groet"
+
+
+}
+
+window.onload = function () {
+    var ta = document.getElementById("bericht");
+    var timer = 0;
+    var re = new RegExp("\\b(" + Object.keys(shortcuts).join("|") + ")\\b", "g");
+
+    update = function () {
+        ta.value = ta.value.replace(re, function ($0, $1) {
+            return shortcuts[$1.toLowerCase()];
+        });
+    }
+
+    ta.onkeydown = function () {
+        clearTimeout(timer);
+        timer = setTimeout(update, 200);
+
+    }
+}
+</script>
 </head>
 <body>
+<div class="categorieen">
 
-  <div class="categorieen">
-    <h2 class="header2">Zoek op categorie</h2>
-  <ul class="ul">
-    <li><a href="all.php">All</a></li>
-    <li><a href="fcgroningen.php">FC Groningen</a></li>
-    <li><a href="cryptovaluta.php">Cryptovaluta</a></li>
-    <li><a href="trump.php">Trump</a></li>
-  </ul>
-  <form class="form" action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST">
-    <h2 class="header2"> Zoek op blogger </h2>
-    <input id="blogger" type="text" name="blogger" required><br><br>
-    <input id="button" type="submit" name= "button2" value="Search">
-  </form>
+<br> <br>
+<form class="form" action="send_comment.php" method="POST">
+  <h2 class="header2"> Bericht: </h2>
+  <textarea id="bericht" type="text" name="bericht" required></textarea>
+  <input class="button" type="submit" value="Verzenden">
+</form>
+</div>
 
-  <div class="bericht" id="trump">
-    <?php
-    echo  '<form class="form" action="comment.php" method="POST">'.
-          '<textarea id="comment1" placeholder="add comment.." name="comment" rows="4" cols="80"></textarea>'.
-          '<input id="button" type="submit" value="Reageer">'."</form>"."<hr></div>";
-    ?>
-  </div>
-
-  </div>
 
 </body>
 </html>

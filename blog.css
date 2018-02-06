@@ -98,7 +98,7 @@ button {
   -webkit-box-shadow: 6px 6px 5px #999;
   -moz-box-shadow: 6px 6px 5px #999;
 }
-#button {
+.button {
   cursor: pointer;
   background-color: #008e5a;
   font-family: verdana;
@@ -135,4 +135,11 @@ button {
   #comment1{
     resize: none;
     border-radius: 5px;
+  }
+  #comment {
+    margin-left: 10%;
+    width: 40%;
+    height: 300px;
+    text-align: left;
+    resize: none;
   }
