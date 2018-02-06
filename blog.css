@@ -1,0 +1,138 @@
+body{
+  background-color: #e1e8f4;
+}
+
+#header1{
+  text-align: center;
+  font-family: verdana;
+  margin-top: 9%;
+  margin-bottom: 6%;
+  color: #d54d7b;
+  font-size: 65px;
+  line-height: 60px;
+  font-weight: normal;
+  text-align: center;
+  text-shadow: 0 1px 1px #fff;
+}
+
+.button1{
+  padding: 20px;
+  cursor: pointer;
+  box-shadow: 6px 6px 5px;
+  -webkit-box-shadow: 6px 6px 5px #999;
+  -moz-box-shadow: 6px 6px 5px #999;
+  background: #008e5a;
+  color: white;
+  font-family: verdana;
+  border-radius: 10px;
+  border:1px;
+  font-size: 20px;
+  text-align: center;
+  margin: center;
+  width: 20%;
+  margin-left: 40%;
+  margin-right: 40%;
+}
+
+.categorieen{
+  text-align: center;
+}
+
+.ul{
+  list-style-type: none;
+  width 100%;
+  text-align: center;
+}
+li {
+  display: inline;
+}
+li a {
+  display: inline-block;
+  font-family: verdana;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  background-color: #008e5a;
+  border-radius: 5px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: #d54d7b;
+  color: white;
+}
+.header2{
+  color: #d54d7b;
+}
+.bericht{
+  margin:auto;
+  width: 50%;
+  height: 100%;
+  margin-top: 3%;
+  background-color: #80bc85;
+  text-align: left;
+  border-radius: 10px;
+  font-size: 18px;
+}
+.dropdown {
+  background-color: #008e5a;
+  min-width: 210px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  color: white;
+  margin-top: 0,5%;
+  text-align-last:center;
+  font-size: 16px;
+}
+button {
+  cursor: pointer;
+  background-color: #008e5a;
+  font-family: verdana;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 8px;
+  box-shadow: 6px 6px 5px;
+  -webkit-box-shadow: 6px 6px 5px #999;
+  -moz-box-shadow: 6px 6px 5px #999;
+}
+#button {
+  cursor: pointer;
+  background-color: #008e5a;
+  font-family: verdana;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 8px;
+  box-shadow: 6px 6px 5px;
+  -webkit-box-shadow: 6px 6px 5px #999;
+  -moz-box-shadow: 6px 6px 5px #999;
+  }
+#blogger {
+  background-color: #008e5a;
+  color: white;
+  font-family: verdana;
+  font-size: 15px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 6px;
+}
+#bericht {
+  margin-left: 10%;
+  width: 40%;
+  height: 300px;
+  text-align: left;
+  resize: none;
+  }
+  span{
+  float: right;
+  font-weight: bold;
+  }
+  #comment1{
+    resize: none;
+    border-radius: 5px;
+  }
