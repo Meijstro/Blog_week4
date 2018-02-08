@@ -3,6 +3,7 @@
 <head>
 <title></title>
 <link rel="stylesheet" href="blog.css">
+<script src= "jquery-3.3.1.min.js"></script>
 <script>
 shortcuts = {
     "cci": "customer called in",
@@ -39,12 +40,33 @@ window.onload = function () {
 </head>
 <body>
 <div class="categorieen">
+<?php
+$article_id = $_POST['article_id'];
+$sql= "SELECT * FROM articles WHERE id='$article_id'";
+$result= mysqli_query($connection,$sql);
+while($row= mysqli_fetch_assoc($result))
+{
+echo "<div class=bericht>".$row['id']."<div class='category_".$row['categorie']."'><br>"."<b>".$row["user"]."</b>"." "."<span>".$row["timestamp"].
+"</span>"."<br>"."<br>"."&nbsp;&nbsp;".$row["message"]."<br>"."<br>"."<hr>"."</div>";
+}
+
+// $sql= "SELECT * FROM comments, articles WHERE $article_id = "id" AND comments.article_id = articles.id;";
+// $result= mysqli_query($connection,$sql);
+// while($row= mysqli_fetch_assoc($result))
+//   {
+//     echo $row["user"]."</b>"." "."<span>".$row["timestamp"].
+//     "</span>"."<br>"."<br>"."&nbsp;&nbsp;".$row["message"]."<br>"."<br>"
+//   }
+
+  ?>
 
 <br> <br>
+<div>
 <form class="form" action="send_comment.php" method="POST">
-  <h2 class="header2"> Bericht: </h2>
-  <textarea id="bericht" type="text" name="bericht" required></textarea>
+  <h2 class="header2"> Comment: </h2>
+  <textarea id="bericht" type="text" name="comment" required></textarea>
   <input class="button" type="submit" value="Verzenden">
+  <input type="hidden" id="article_id" name="article_id" value="<?php echo $article_id;?>">
 </form>
 </div>
 

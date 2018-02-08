@@ -3,6 +3,7 @@
 <head>
 <title></title>
 <link rel="stylesheet" href="blog.css">
+<script src= "jquery-3.3.1.min.js"></script>
 <script src="filter.js"></script>
 </head>
 <body>
@@ -20,14 +21,15 @@
   <?php
 
   // use data from the database and show it
-  $sql= "SELECT * FROM list ORDER BY timestamp DESC;";
+  $sql= "SELECT * FROM articles ORDER BY timestamp DESC;";
   $result= mysqli_query($connection,$sql);
   while($row= mysqli_fetch_assoc($result))
   {
-  echo "<div class='category_".$row['categorie']."'><br>"."<b>".$row["user"]."</b>"." "."<span>".$row["timestamp"].
+  echo $row['id']."<div class='category_".$row['categorie']."'><br>"."<b>".$row["user"]."</b>"." "."<span>".$row["timestamp"].
   "</span>"."<br>"."<br>"."&nbsp;&nbsp;".$row["message"]."<br>"."<br>".
-  '<form class="form" action="comment.php">'.
-  '<input class="button" type="submit" value="Reageer">'."</form>"."<hr></div>";
+  '<form class="form" action="comment.php" method="POST">'.
+  '<input class="button" type="submit" value="Reageer">'.
+  '<input type="hidden" name="article_id">'."</form>"."<hr></div>";
   }
 
 

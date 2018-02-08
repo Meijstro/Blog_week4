@@ -3,6 +3,7 @@
 <head>
 <title></title>
 <link rel="stylesheet" href="blog.css">
+<script src= "jquery-3.3.1.min.js"></script>
 <script>
 shortcuts = {
     "cci": "customer called in",
@@ -52,7 +53,7 @@ window.onload = function () {
   <input id="blogger" type="text" name="blogger" required><br>
   <h2 class="header2"> Bericht: </h2>
   <textarea id="bericht" type="text" name="bericht" required></textarea>
-  <input id="button" type="submit" value="Verzenden">
+  <input class="button" type="submit" value="Verzenden"/>
 </form>
 </div>
 

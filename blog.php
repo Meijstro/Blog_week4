@@ -3,6 +3,7 @@
 <head>
 <title></title>
 <link rel="stylesheet" href="blog.css">
+<script src= "jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src=""></script>
 </head>
 <body>
@@ -26,7 +27,7 @@
    $bericht=$_POST["bericht"];
    $blogger=$_POST["blogger"];
    $categorie=$_POST["categorie"];
-   $sql="INSERT INTO list(user, message, categorie)
+   $sql="INSERT INTO articles(user, message, categorie)
    VALUES ('$blogger','$bericht','$categorie')";
    $result= mysqli_query($connection,$sql);
 
