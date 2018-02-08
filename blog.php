@@ -17,10 +17,10 @@
  <div class="bericht" id="all">
    <?php
    // show written article to blogger
-   echo "<br>"."<b>".$_POST["blogger"]."</b>". " ";
-   echo "<br>"."<br>";
-   echo "&nbsp;&nbsp;".$_POST["bericht"];
-   echo "<hr>";
+    echo "<br>"."<b>".$_POST["blogger"]."</b>". " ";
+    echo "<br>"."<br>";
+    echo "&nbsp;&nbsp;".$_POST["bericht"];
+    echo "<hr>";
 
 
    // send the data to database
