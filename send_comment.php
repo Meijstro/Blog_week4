@@ -1,12 +1,22 @@
 
 <?php include("database.php")?>
-<?php
+
+<ul class="ul">
+  <li><a href="all.php">Go to Blog</a></li>
+</ul>
+  <div class="bericht" id="all">
+    <?php
+    // show written article to blogger
+
+    echo "&nbsp;&nbsp;".$_POST["comment"];
+    echo "<hr>";
 
 
-$article_id = $_POST['article_id'];
-    $comment = $_POST['comment'];
-    $sql = "INSERT INTO comments(comment, article_id,)
-            VALUES ('$comment', '$article_id')";
-    $result = mysqli_query($connection,$sql);
-header("Location: comment.php");
-  ?>
+    // send the data to database
+    $comment=$_POST["comment"];
+    $sql="INSERT INTO comments(comment)
+    VALUES ('$comment')";
+    $result= mysqli_query($connection,$sql);
+
+     ?>
+  </div>

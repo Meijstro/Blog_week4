@@ -18,22 +18,22 @@
   </ul>
 
   <div class="bericht" id="all">
-  <?php
+    <?php
 
   // use data from the database and show it
-  $sql= "SELECT * FROM articles ORDER BY timestamp DESC;";
-  $result= mysqli_query($connection,$sql);
-  while($row= mysqli_fetch_assoc($result))
-  {
-  echo $row['id']."<div class='category_".$row['categorie']."'><br>"."<b>".$row["user"]."</b>"." "."<span>".$row["timestamp"].
-  "</span>"."<br>"."<br>"."&nbsp;&nbsp;".$row["message"]."<br>"."<br>".
-  '<form class="form" action="comment.php" method="POST">'.
-  '<input class="button" type="submit" value="Reageer">'.
-  '<input type="hidden" name="article_id" value="'.$row['id'].'">'."</form>"."<hr></div>";
+    $sql= "SELECT * FROM articles ORDER BY timestamp DESC;";
+    $result= mysqli_query($connection,$sql);
+    while($row= mysqli_fetch_assoc($result))
+    {
+      echo "<div class='category_".$row['categorie']."'><br>"."<b>".$row["user"]."</b>"." "."<span>".$row["timestamp"].
+           "</span>"."<br>"."<br>"."&nbsp;&nbsp;".$row["message"]."<br>"."<br>".
+           '<form class="form" action="comment.php" method="POST">'.
+           '<input class="button" type="submit" value="Reageer">'.
+           '<input type="hidden" name="article_id" value="'.$row['id'].'">'."</form>"."<hr></div>";
   }
 
 
-  ?>
+    ?>
   </div>
   </div>
 
