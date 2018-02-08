@@ -29,7 +29,7 @@
   "</span>"."<br>"."<br>"."&nbsp;&nbsp;".$row["message"]."<br>"."<br>".
   '<form class="form" action="comment.php" method="POST">'.
   '<input class="button" type="submit" value="Reageer">'.
-  '<input type="hidden" name="article_id">'."</form>"."<hr></div>";
+  '<input type="hidden" name="article_id" value="'.$row['id'].'">'."</form>"."<hr></div>";
   }
 
 

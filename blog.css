@@ -143,3 +143,10 @@ button {
     text-align: left;
     resize: none;
   }
+  #text_comment{
+    margin-left: 3%;
+    width: 75%;
+    height: 300px;
+    text-align: left;
+    resize: none;
+  }

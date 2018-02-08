@@ -6,9 +6,6 @@
 <script src= "jquery-3.3.1.min.js"></script>
 <script>
 shortcuts = {
-    "cci": "customer called in",
-    "rfc": "request for comments",
-    "www": "world wide web",
     "cg": "CodeGorilla",
     "CG": "CodeGorilla",
     "gn": "Groningen",

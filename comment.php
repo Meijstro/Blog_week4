@@ -64,7 +64,7 @@ echo "<div class=bericht>".$row['id']."<div class='category_".$row['categorie'].
 <div>
 <form class="form" action="send_comment.php" method="POST">
   <h2 class="header2"> Comment: </h2>
-  <textarea id="bericht" type="text" name="comment" required></textarea>
+  <textarea id="text_comment" type="text" name="comment" required></textarea>
   <input class="button" type="submit" value="Verzenden">
   <input type="hidden" id="article_id" name="article_id" value="<?php echo $article_id;?>">
 </form>
